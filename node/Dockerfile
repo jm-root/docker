@@ -1,7 +1,7 @@
-FROM node:10-alpine
+FROM node:12-alpine
 MAINTAINER Jeff YU, jeff@jamma.cn
+RUN yarn config set registry https://registry.npm.taobao.org
 ENV NODE_ENV production
-RUN npm i -g yarn
 RUN mkdir -p /app
 WORKDIR /app
 CMD npm start
